@@ -20,7 +20,7 @@ for i in range(3):
     url = st.sidebar.text_input(f"URL {i+1}")
     urls.append(url)
 
-process_url_clicked = st.sidebar.button("Click to Process")
+process_url_clicked = st.sidebar.button("Process URLs")
 file_path = "faiss_store_openai.pkl"
 
 main_placeholder = st.empty()
