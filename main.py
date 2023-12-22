@@ -51,6 +51,7 @@ if process_url_clicked:
     time.sleep(2)
 
     # Save the FAISS index to a pickle file
+    
     with open(file_path, "wb") as f:
         pickle.dump(vectorstore_openai, f)
 
@@ -62,7 +63,7 @@ if query:
             chain = RetrievalQAWithSourcesChain.from_llm(llm=llm, retriever=vectorstore.as_retriever())
             result = chain({"question": query}, return_only_outputs=True)
           
-            # result will be a dictionary of this format --> {"answer": "", "sources": [] }
+            # result format --> {"answer": "", "sources": [] }
           
             st.header("Answer for the query")
             st.write(result["answer"])
@@ -72,6 +73,6 @@ if query:
             sources = result.get("sources", "")
             if sources:
                 st.subheader("Sources:")
-                sources_list = sources.split("\n")  # Split the sources by newline
+                sources_list = sources.split("\n")  
                 for source in sources_list:
                     st.write(source)
