@@ -7,3 +7,5 @@ In the app, the sidebar allows direct input of financial articles' URLs to initi
 These embeddings are stored and indexed using FAISS. The FAISS index is saved locally in a file path in pickle format, ensuring easy access, enhancing retrieval speed for future queries, and usability for subsequent use.
 
 With the processing complete, users can then pose questions and receive answers based on the information contained within those news articles.
+[This is the Screen shot of the UI.](https://github.com/jayanand100/FINALYTICS/assets/110692784/c105cee1-1d2a-4b72-af20-0038f8f8855f)
+
